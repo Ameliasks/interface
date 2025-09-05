@@ -35,3 +35,31 @@ dialog::backdrop {
   border-radius: 7px;
 }
 /* .:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:. .:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.  */
+
+.parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.image1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 85rem;
+  height: auto;
+}
+.image2 {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 85rem;
+  height: auto;
+}
+
+.image3 {
+  position: absolute;
+  top: 38px;
+  left: 254px;
+  width: 42rem;
+  height: auto;
+}
