@@ -56,10 +56,40 @@ dialog::backdrop {
   height: auto;
 }
 
-.image3 {
+/* rotate disk */
+
+.rotate {
+  animation: rotation 8s infinite linear;
   position: absolute;
   top: 38px;
   left: 254px;
   width: 42rem;
   height: auto;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.rotatable {
+  transition: transform 0.5s ease-in-out; /* Smooth transition for rotation */
+}
+
+.rotated {
+  transform: rotate(180deg); /* Or any desired rotation angle */
+}
+
+#toggleButton {
+  transition-duration: 0.4s;
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: 0.4px;
 }

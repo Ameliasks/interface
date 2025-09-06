@@ -8,7 +8,5 @@ document.getElementById("introDialog").showModal();
 document.getElementById("dialogCloseButton").addEventListener("click", () => {
   introModal.close();
 });
-/* finally we want to initialize the synthesizer when the modal is closed */
-/* because this can be through the above button, or by pressing esc, we tie it to the actual close event */
-/* the referenced toneInit function is defined in toneSetup.js */
+
 introModal.addEventListener("close", toneInit);
