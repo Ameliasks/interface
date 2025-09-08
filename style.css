@@ -44,7 +44,7 @@ dialog::backdrop {
 .image1 {
   position: relative;
   top: 0;
-  left: 0;
+  left: 24px;
   width: 85rem;
   height: auto;
 }
@@ -59,10 +59,10 @@ dialog::backdrop {
 /* rotate disk */
 
 .rotate {
-  animation: rotation 8s infinite linear;
+  animation: rotation 5s infinite linear;
   position: absolute;
   top: 38px;
-  left: 254px;
+  left: 278px;
   width: 42rem;
   height: auto;
 }
@@ -84,12 +84,81 @@ dialog::backdrop {
   transform: rotate(180deg); /* Or any desired rotation angle */
 }
 
+.container-start {
+  position: absolute;
+  top: 82%;
+  left: 21%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.container-start:hover {
+  background-color: black;
+}
+
 #toggleButton {
   transition-duration: 0.4s;
   font-family: "Instrument Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  font-size: 18px;
+  font-size: 12px;
   letter-spacing: 0.4px;
+  border-width: 1px;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  position: absolute;
+}
+
+.slidecontainer {
+  width: 14%; /* Width of the outside container */
+  height: 5%;
+  position: absolute;
+  border: 1px solid black;
+  transform: rotate(90deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 73%;
+  left: 67.5%;
+  border-radius: 2px;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 90%; /* Full-width */
+  height: 10px; /* Specified height */
+  background: black;
+  outline: none; /* Remove outline */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 26px; /* Set a specific slider handle width */
+  height: 31px; /* Slider handle height */
+  background: url("img/slide.png");
+  background-size: contain;
+  cursor: pointer; /* Cursor on hover */
+  transform: rotate(90deg);
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04aa6d; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  transform: rotate(90deg);
 }

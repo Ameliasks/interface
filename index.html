@@ -21,9 +21,21 @@
 
 <div class="parent">
   <img class="image1" src="img/base.png" />
-  <!-- <img class="image3" src="img/vinyl.png" /> -->
   <img src="img/vinyl.png" class="rotate" />
   <img class="image2" src="img/needle.png" />
+  <!-- START/STOP button -->
+  <div class="container-start">
+    <button id="toggleButton">START/STOP</button>
+  </div>
+  <!-- volume slider -->
+  <div class="slidecontainer">
+    <input
+      type="range"
+      min="1"
+      max="100"
+      value="50"
+      class="slider"
+      id="myRange"
+    />
+  </div>
 </div>
-
-<button id="toggleButton">Hover Over Me</button>
