@@ -101,7 +101,7 @@ dialog::backdrop {
   background-color: black;
 }
 
-#toggleButton {
+.toggleButton {
   transition-duration: 0.4s;
   font-family: "Instrument Sans", sans-serif;
   font-optical-sizing: auto;
@@ -115,6 +115,12 @@ dialog::backdrop {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   position: absolute;
+}
+
+.toggleButton:hover {
+  background-color: #babaae;
+  color: black;
+  transition: 0.2s;
 }
 
 .slidecontainer {
@@ -138,6 +144,7 @@ dialog::backdrop {
   width: 90%; /* Full-width */
   height: 10px; /* Specified height */
   background: #babaae;
+  border: 0.7px solid black;
   outline: none; /* Remove outline */
   -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
   transition: opacity 0.2s;
