@@ -16,34 +16,40 @@
       </p>
       <button id="dialogCloseButton" autofocus>OK</button>
     </dialog>
+
+    <div class="parent">
+      <img class="image1" src="img/base.png" />
+      <img src="img/vinyl.png" class="rotate" />
+      <img class="image2" src="img/needle.png" />
+
+      <!-- START/STOP button -->
+      <div class="container-start">
+        <button class="toggleButton">START/STOP</button>
+      </div>
+
+      <!-- info -->
+      <div class="container-info">
+        <button class="infoButton" onclick="popupFn()">i</button>
+        <div id="overlay"></div>
+        <div id="popupDialog">
+          <p>Welcome to GeeksforGeeks</p>
+          <button id="dialogCloseButton" onclick="closeFn()">Close</button>
+        </div>
+      </div>
+
+      <button onclick="toggleDiv()">Toggle Div</button>
+
+      <!-- volume slider -->
+      <div class="slidecontainer">
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="50"
+          class="slider"
+          id="myRange"
+        />
+      </div>
+    </div>
   </body>
 </html>
-
-<div class="parent">
-  <!-- Info button -->
-
-  <img class="image1" src="img/base.png" />
-  <img src="img/vinyl.png" class="rotate" />
-  <img class="image2" src="img/needle.png" />
-
-  <!-- START/STOP button -->
-  <div class="container-start">
-    <button class="toggleButton">START/STOP</button>
-  </div>
-
-  <div class="container-info">
-    <button class="infoButton">i</button>
-  </div>
-
-  <!-- volume slider -->
-  <div class="slidecontainer">
-    <input
-      type="range"
-      min="1"
-      max="100"
-      value="50"
-      class="slider"
-      id="myRange"
-    />
-  </div>
-</div>

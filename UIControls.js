@@ -21,3 +21,13 @@ output.innerHTML = slider.value; // Display the default slider value
 slider.oninput = function () {
   output.innerHTML = this.value;
 };
+document.getElementById("popupDialog").style.display = "none";
+
+function popupFn() {
+  document.getElementById("overlay").style.display = "block";
+  document.getElementById("popupDialog").style.display = "block";
+}
+function closeFn() {
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById("popupDialog").style.display = "none";
+}
