@@ -52,10 +52,11 @@ dialog::backdrop {
   width: 85rem;
   height: auto;
 }
+/* needle */
 .image2 {
   position: absolute;
-  top: 30px;
-  left: 30px;
+  top: 0px;
+  left: 15px;
   width: 85rem;
   height: auto;
 }
@@ -104,7 +105,7 @@ dialog::backdrop {
   transition-duration: 0.4s;
   font-family: "Instrument Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   font-size: 12px;
   letter-spacing: 0.4px;
@@ -136,7 +137,7 @@ dialog::backdrop {
   appearance: none;
   width: 90%; /* Full-width */
   height: 10px; /* Specified height */
-  background: black;
+  background: #babaae;
   outline: none; /* Remove outline */
   -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
   transition: opacity 0.2s;
@@ -151,8 +152,8 @@ dialog::backdrop {
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
-  width: 26px; /* Set a specific slider handle width */
-  height: 31px; /* Slider handle height */
+  width: 27px; /* Set a specific slider handle width */
+  height: 32px; /* Slider handle height */
   background: url("img/slide.png");
   background-size: contain;
   cursor: pointer; /* Cursor on hover */
