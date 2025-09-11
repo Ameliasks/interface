@@ -15,7 +15,7 @@ introModal.addEventListener("close", toneInit);
 
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
-output.innerHTML = slider.value; // Display the default slider value
+output.innerHTML = slider.value;
 
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function () {
@@ -31,3 +31,33 @@ function closeFn() {
   document.getElementById("overlay").style.display = "none";
   document.getElementById("popupDialog").style.display = "none";
 }
+
+// knob
+
+// const knob = document.querySelector(".knob");
+
+// function calculateDegree(e) {
+//   const x1 = window.innerWidth / 2;
+//   const y1 = innerHeight / 2;
+//   const x2 = e.clientX;
+//   const y2 = e.elientY;
+
+//   const deltaX = x1 - x2;
+//   const deltaY = y1 - y2;
+
+//   const rad = Math.atan2(deltaY, deltaX);
+
+//   let deg = rad * (180 / Math.PI);
+//   return deg;
+// }
+
+// knob.addEventListener("mousedown", function () {
+//   knob.addEventListener("mousemove", rotate);
+//   function rotate(e) {
+//     const result = Math.floor(calculateDegree(e) - 90);
+//     knob.style.transform = `rotate(${result}deg)`;
+//   }
+//   knob.addEventListener("mouseup", function () {
+//     knob.removeEventListener("mousemove", rotate);
+//   });
+// });
