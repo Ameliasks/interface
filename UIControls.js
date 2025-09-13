@@ -61,3 +61,8 @@ function closeFn() {
 //     knob.removeEventListener("mousemove", rotate);
 //   });
 // });
+
+function playMusic() {
+  var music = new Audio("audio/TRACK_REMIX_1.wav");
+  music.play();
+}

@@ -14,7 +14,7 @@
         This synthesizer will make some noise, please check your system's volume
         setting.
       </p>
-      <button id="dialogCloseButton" autofocus>OK</button>
+      <button id="dialogCloseButton" onclick="playMusic()" autofocus>OK</button>
     </dialog>
 
     <div class="parent">
@@ -55,3 +55,10 @@
     </div>
   </body>
 </html>
+
+<!-- play audio -->
+
+<audio id="#main-remix-1">
+  <source src="./audio/TRACK_REMIX_1.wav" type="audio/wav" />
+  Your browser does not support the audio element.
+</audio>
