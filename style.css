@@ -12,13 +12,32 @@ dialog[open] {
   margin: auto; /* place in centre */
   padding: 1.8rem 3rem;
   background-color: rgb(234, 236, 228);
-  color: var(--col02);
-  border: black;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
   border-radius: 10px;
+  border: none;
+}
+
+h1 {
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 22px;
+  letter-spacing: 0.4px;
+}
+
+.uppercase-text {
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: justify;
 }
 
 p {
@@ -149,6 +168,11 @@ dialog::backdrop {
   border-radius: 6px;
 }
 
+.close-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .infoButton:hover {
   background-color: #babaae;
   color: black;
@@ -215,18 +239,15 @@ dialog::backdrop {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
   padding: 1.8rem 3rem;
-  display: flex;
   align-items: center;
   gap: 0.5rem;
   border-radius: 10px;
   margin: auto;
-  display: none;
+  width: 40rem;
 }
 
 #overlay {
@@ -261,43 +282,38 @@ dialog::backdrop {
   width: 2.4em;
   height: 2.4em;
   border-radius: 50%;
+  position: relative;
+  background: rgb(234, 236, 228);
 }
 
-.dial::before,
 .knob {
   width: 2.4em;
   height: 2.4em;
   position: relative;
+  background: rgb(234, 236, 228);
 }
 
-.knob::after,
-.dial::before {
+.knob::after {
   content: "";
   position: absolute;
   border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 130%;
+  height: 130%;
+  border: 1px solid #000000;
 }
 
 .knob::before {
   content: "";
   position: absolute;
-}
-
-.knob::before {
+  border-radius: -50%;
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
   width: 15px;
   height: 35px;
   background: rgb(234, 236, 228);
-  border: 1px solid #000000;
-  border-radius: -50%;
-}
-
-.knob::after {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 130%;
-  height: 130%;
   border: 1px solid #000000;
 }

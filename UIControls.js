@@ -21,6 +21,7 @@ output.innerHTML = slider.value;
 slider.oninput = function () {
   output.innerHTML = this.value;
 };
+
 document.getElementById("popupDialog").style.display = "none";
 
 function popupFn() {
@@ -62,7 +63,29 @@ function closeFn() {
 //   });
 // });
 
+//START/STOP button toggles audio on and off
+
+const toggleButton = document.querySelector("toggleButton");
+
 function playMusic() {
-  var music = new Audio("audio/TRACK_REMIX_1.wav");
+  var music = document.getElementById("main-remix-1");
   music.play();
 }
+
+function togglePlayPause() {
+  var myAudio = document.getElementById("main-remix-1");
+  if (myAudio.paused) {
+    myAudio.play();
+    //document.getElementById("play").innerHTML="Pause";
+  } else {
+    myAudio.pause();
+    //document.getElementById("Pause").innerHTML="Play";
+  }
+}
+
+// slider controls volume of audio
+
+// let volume = document.getElementById("#myRange.slider");
+// volume.addEventListener("change", function (e) {
+//   audio.volume = e.currentTarget.value / 100;
+// });

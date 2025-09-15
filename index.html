@@ -11,7 +11,7 @@
   <body>
     <dialog id="introDialog">
       <p>
-        This synthesizer will make some noise, please check your system's volume
+        This interface will make some noise, please check your system's volume
         setting.
       </p>
 
@@ -27,7 +27,9 @@
 
       <!-- START/STOP button -->
       <div class="container-start">
-        <button class="toggleButton">START/STOP</button>
+        <button class="toggleButton" onClick="togglePlayPause()">
+          START/STOP
+        </button>
       </div>
 
       <!-- info -->
@@ -35,8 +37,16 @@
         <button class="infoButton" onclick="popupFn()">i</button>
         <div id="overlay"></div>
         <div id="popupDialog">
-          <p>Welcome to GeeksforGeeks</p>
-          <button id="dialogCloseButton" onclick="closeFn()">Close</button>
+          <h1>Let's just live in the moment</h1>
+          <h2>
+            This is an adaptive turnable that adapts to the time of day you are
+            listening to it, providing a unique experience at each time. You may
+            adjust the sounds through the turnatable controllers. Live in the
+            moment and craft your own unique experience.
+          </h2>
+          <div class="close-container">
+            <button id="dialogCloseButton" onclick="closeFn()">Close</button>
+          </div>
         </div>
       </div>
 
@@ -62,7 +72,7 @@
 
 <!-- play audio -->
 
-<audio id="#main-remix-1">
+<audio id="main-remix-1">
   <source src="./audio/TRACK_REMIX_1.wav" type="audio/wav" />
   Your browser does not support the audio element.
 </audio>
