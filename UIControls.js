@@ -33,36 +33,6 @@ function closeFn() {
   document.getElementById("popupDialog").style.display = "none";
 }
 
-// knob
-
-// const knob = document.querySelector(".knob");
-
-// function calculateDegree(e) {
-//   const x1 = window.innerWidth / 2;
-//   const y1 = innerHeight / 2;
-//   const x2 = e.clientX;
-//   const y2 = e.elientY;
-
-//   const deltaX = x1 - x2;
-//   const deltaY = y1 - y2;
-
-//   const rad = Math.atan2(deltaY, deltaX);
-
-//   let deg = rad * (180 / Math.PI);
-//   return deg;
-// }
-
-// knob.addEventListener("mousedown", function () {
-//   knob.addEventListener("mousemove", rotate);
-//   function rotate(e) {
-//     const result = Math.floor(calculateDegree(e) - 90);
-//     knob.style.transform = `rotate(${result}deg)`;
-//   }
-//   knob.addEventListener("mouseup", function () {
-//     knob.removeEventListener("mousemove", rotate);
-//   });
-// });
-
 //START/STOP button toggles audio on and off
 
 const toggleButton = document.querySelector("toggleButton");
@@ -83,30 +53,45 @@ function togglePlayPause() {
   }
 }
 
-// slider controls volume of audio
+//button toggles ambient sound on/off
 
-// let volume = document.getElementById("#myRange.slider");
-// volume.addEventListener("change", function (e) {
-//   audio.volume = e.currentTarget.value / 100;
+function toggleOnOff() {
+  var ambient = document.getElementById("ambient-1");
+  let base = document.getElementById("main-remix-1");
+
+  if (ambient.paused) {
+    ambient.play();
+    base.volume = 0.7;
+  } else {
+    ambient.pause();
+    base.volume = 1.0;
+  }
+}
+
+// changes button color on click
+
+// var changeColorButton = document.querySelector("knob");
+// var colorChange = document.querySelector("dial");
+
+// changeColorButton.addEventListener("click", function () {
+//   colorChange.style.backgroundColor = "red"; // Changes the background color of the clicked button to red
 // });
 
-//START/STOP button plays and pauses rotation
+function myFunction() {
+  var element = document.getElementById("dial");
+  element.classList.toggle("dial-on");
+}
 
-document.addEventListener("DOMContentLoaded", () => {
-  const rotatingItem = document.getElementById("rotate");
-  const toggleRotationButton = document.getElementById("toggleButton");
-  let isRotating = true; // Initial state
+// slider controls volume of audio
 
-  toggleRotationButton.addEventListener("click", () => {
-    if (isRotating) {
-      rotatingItem.classList.remove("rotate"); // Stop rotation
-      toggleRotationButton.textContent = "Start Rotation";
-    } else {
-      rotatingItem.classList.add("rotate"); // Start rotation
-      toggleRotationButton.textContent = "Stop Rotation";
-    }
-    isRotating = !isRotating; // Toggle the state
-  });
+const volumeSlider = document.getElementById("volumeSlider");
+
+// Set initial volume based on slider value
+myAudio.volume = volumeSlider.value / 100;
+
+// Add an event listener to update volume when the slider changes
+volumeSlider.addEventListener("change", function (e) {
+  myAudio.volume = e.target.value / 100;
 });
 
-//^does not work yet
+//START/STOP button plays and pauses rotation
