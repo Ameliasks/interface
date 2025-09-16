@@ -89,3 +89,24 @@ function togglePlayPause() {
 // volume.addEventListener("change", function (e) {
 //   audio.volume = e.currentTarget.value / 100;
 // });
+
+//START/STOP button plays and pauses rotation
+
+document.addEventListener("DOMContentLoaded", () => {
+  const rotatingItem = document.getElementById("rotate");
+  const toggleRotationButton = document.getElementById("toggleButton");
+  let isRotating = true; // Initial state
+
+  toggleRotationButton.addEventListener("click", () => {
+    if (isRotating) {
+      rotatingItem.classList.remove("rotate"); // Stop rotation
+      toggleRotationButton.textContent = "Start Rotation";
+    } else {
+      rotatingItem.classList.add("rotate"); // Start rotation
+      toggleRotationButton.textContent = "Stop Rotation";
+    }
+    isRotating = !isRotating; // Toggle the state
+  });
+});
+
+//^does not work yet
