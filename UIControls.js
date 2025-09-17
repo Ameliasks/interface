@@ -9,18 +9,7 @@ document.getElementById("dialogCloseButton").addEventListener("click", () => {
   introModal.close();
 });
 
-introModal.addEventListener("close", toneInit);
-
-// volume slider
-
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value;
-
-// Update the current slider value (each time you drag the slider handle)
-slider.oninput = function () {
-  output.innerHTML = this.value;
-};
+// introModal.addEventListener("close", toneInit);
 
 document.getElementById("popupDialog").style.display = "none";
 
@@ -51,6 +40,10 @@ function togglePlayPause() {
     myAudio.pause();
     //document.getElementById("Pause").innerHTML="Play";
   }
+
+  var vinylRotate = document.getElementById("image3");
+  console.log(vinylRotate);
+  vinylRotate.classList.toggle("rotate");
 }
 
 //button toggles ambient sound on/off
@@ -61,13 +54,16 @@ function toggleOnOff() {
 
   if (ambient.paused) {
     ambient.play();
-    base.volume = 0.7;
+    base.volume = 0.5;
   } else {
     ambient.pause();
     base.volume = 1.0;
   }
 }
 
+// function toggleRotation() {
+
+// }
 // changes button color on click
 
 // var changeColorButton = document.querySelector("knob");
@@ -82,16 +78,18 @@ function myFunction() {
   element.classList.toggle("dial-on");
 }
 
-// slider controls volume of audio
+//START/STOP button plays and pauses rotation
+
+function toggleHighlight() {
+  let myBox = document.getElementById("myBox");
+  myBox.classList.toggle("highlight");
+}
+
+/// volume slider
 
 const volumeSlider = document.getElementById("volumeSlider");
+const audio = document.getElementById("main-remix-1");
 
-// Set initial volume based on slider value
-myAudio.volume = volumeSlider.value / 100;
-
-// Add an event listener to update volume when the slider changes
-volumeSlider.addEventListener("change", function (e) {
-  myAudio.volume = e.target.value / 100;
+volumeSlider.addEventListener("input", function () {
+  audio.volume = this.value / 100;
 });
-
-//START/STOP button plays and pauses rotation

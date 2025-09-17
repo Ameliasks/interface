@@ -21,7 +21,9 @@
     <!-- layering the photo layers -->
     <div class="parent">
       <img class="image1" src="img/base.png" />
-      <img src="img/vinyl.png" class="rotate" />
+      <div class="image3">
+        <img id="image3" class="rotate" src="img/vinyl.png" />
+      </div>
       <img class="image2" src="img/needle.png" />
 
       <!-- START/STOP button -->
@@ -30,8 +32,6 @@
           START/STOP
         </button>
       </div>
-
-      <button id="toggleRotation">Pause Rotation</button>
 
       <!-- info -->
       <div class="container-info">
@@ -60,7 +60,6 @@
           max="100"
           value="50"
           class="slider"
-          steps="10"
           id="volumeSlider"
         />
       </div>
