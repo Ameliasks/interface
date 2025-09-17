@@ -94,6 +94,11 @@ dialog::backdrop {
   width: 42rem;
   height: auto;
 }
+#image3 {
+  position: absolute;
+  width: 42rem;
+  height: auto;
+}
 .rotate {
   width: 42rem;
   animation: rotation 4s infinite linear;
