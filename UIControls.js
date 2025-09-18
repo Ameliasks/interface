@@ -42,7 +42,6 @@ function togglePlayPause() {
   }
 
   var vinylRotate = document.getElementById("image3");
-  console.log(vinylRotate);
   vinylRotate.classList.toggle("rotate");
 }
 
@@ -93,3 +92,22 @@ const audio = document.getElementById("main-remix-1");
 volumeSlider.addEventListener("input", function () {
   audio.volume = this.value / 100;
 });
+
+//const myElement = document.getElementById('myElementId');
+
+// // Define the target date (e.g., December 25th of the current year)
+// const targetDate = new Date(new Date().getFullYear(), 11, 25); // Month is 0-indexed (11 for December)
+
+// // Get the current date
+// const currentDate = new Date();
+
+// // Define the class to toggle
+// const className = 'highlight-holiday';
+
+// // Check if the current date is the target date
+// if (currentDate.getDate() === targetDate.getDate() &&
+//     currentDate.getMonth() === targetDate.getMonth()) {
+//     myElement.classList.toggle(className, true); // Add the class if it's the target date
+// } else {
+//     myElement.classList.toggle(className, false); // Remove the class if it's not
+// }
