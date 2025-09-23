@@ -111,3 +111,9 @@ volumeSlider.addEventListener("input", function () {
 // } else {
 //     myElement.classList.toggle(className, false); // Remove the class if it's not
 // }
+
+// Get current date and time
+var now = new Date();
+var datetime = now.toLocaleString();
+
+document.getElementById("datetime").innerHTML = datetime;

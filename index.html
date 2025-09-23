@@ -68,18 +68,21 @@
       <div class="dial" onclick="toggleOnOff()" transition="0.5s">
         <button class="knob" onclick=" myFunction()"></button>
       </div>
+
+      <!-- date time display -->
+      <div class="datetime"><p id="datetime"></p></div>
     </div>
   </body>
+
+  <!-- play audio -->
+
+  <audio id="main-remix-1">
+    <source src="./audio/TRACK_REMIX_1.wav" type="audio/wav" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <audio id="ambient-1">
+    <source src="./audio/ambientCity.mp3" type="audio/mp3" />
+    Your browser does not support the audio element.
+  </audio>
 </html>
-
-<!-- play audio -->
-
-<audio id="main-remix-1">
-  <source src="./audio/TRACK_REMIX_1.wav" type="audio/wav" />
-  Your browser does not support the audio element.
-</audio>
-
-<audio id="ambient-1">
-  <source src="./audio/ambientCity.mp3" type="audio/mp3" />
-  Your browser does not support the audio element.
-</audio>
