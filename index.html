@@ -22,7 +22,8 @@
     <div class="parent">
       <img class="image1" src="img/base.png" />
       <div class="image3">
-        <img id="image3" class="rotate" src="img/vinyl.png" />
+        <img id="vinyl" class="rotate" />
+        <!-- src="img/vinyl.png" -->
       </div>
       <img class="image2" src="img/needle.png" />
 
@@ -44,7 +45,7 @@
             listening to it, providing a unique experience at each time. You may
             adjust the audio through the turnatable controllers. Live in the
             moment and craft your own unique experience. <br />
-            <br />[Disclaimer: still fixing bugs and adding features]
+            <br />
           </h2>
           <div class="close-container">
             <button id="dialogCloseButton" onclick="closeFn()">Close</button>
@@ -69,8 +70,13 @@
         <button class="knob" onclick=" myFunction()"></button>
       </div>
 
+      <!-- use javascript class list method -->
+
       <!-- date time display -->
-      <div class="datetime"><p id="datetime"></p></div>
+      <div class="datetime">
+        <p id="dateDisplay"></p>
+        <p id="timeDisplay"></p>
+      </div>
     </div>
   </body>
 

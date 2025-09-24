@@ -60,18 +60,6 @@ function toggleOnOff() {
   }
 }
 
-// function toggleRotation() {
-
-// }
-// changes button color on click
-
-// var changeColorButton = document.querySelector("knob");
-// var colorChange = document.querySelector("dial");
-
-// changeColorButton.addEventListener("click", function () {
-//   colorChange.style.backgroundColor = "red"; // Changes the background color of the clicked button to red
-// });
-
 function myFunction() {
   var element = document.getElementById("dial");
   element.classList.toggle("dial-on");
@@ -113,7 +101,21 @@ volumeSlider.addEventListener("input", function () {
 // }
 
 // Get current date and time
-var now = new Date();
-var datetime = now.toLocaleString();
 
-document.getElementById("datetime").innerHTML = datetime;
+// set interval
+
+let now = new Date();
+console.log(now.getHours());
+
+// display date(day)
+var dayName = now.toLocaleString("en-US", { weekday: "long" });
+document.getElementById("dateDisplay").innerHTML = dayName;
+
+// display time
+var dateShort = now.toLocaleString("en-US", { timeStyle: "short" });
+document.getElementById("timeDisplay").innerHTML = dateShort;
+
+
+// use if / else statements (8-16 etc.)
+// ^find img element
+// set src attribute
