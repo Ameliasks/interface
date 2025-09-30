@@ -81,17 +81,6 @@ volumeSlider.addEventListener("input", function () {
   audio.volume = this.value / 100;
 });
 
-//const myElement = document.getElementById('myElementId');
-
-// // Define the target date (e.g., December 25th of the current year)
-// const targetDate = new Date(new Date().getFullYear(), 11, 25); // Month is 0-indexed (11 for December)
-
-// // Get the current date
-// const currentDate = new Date();
-
-// // Define the class to toggle
-// const className = 'highlight-holiday';
-
 // // Check if the current date is the target date
 // if (currentDate.getDate() === targetDate.getDate() &&
 //     currentDate.getMonth() === targetDate.getMonth()) {
@@ -115,7 +104,23 @@ document.getElementById("dateDisplay").innerHTML = dayName;
 var dateShort = now.toLocaleString("en-US", { timeStyle: "short" });
 document.getElementById("timeDisplay").innerHTML = dateShort;
 
-
 // use if / else statements (8-16 etc.)
 // ^find img element
 // set src attribute
+
+const currentHour = now.getHours();
+console.log(currentHour);
+
+var imgChange = document.getElementById("change");
+
+if (currentHour < 8) {
+  imgChange.src = "img/vinyl1-alt.png";
+} else {
+  if (8 <= currentHour < 16) {
+    imgChange.src = "img/vinyl2.png";
+  } else {
+    if (16 <= currentHour < 24) {
+      imgChange.src = "img/vinyl3.png";
+    }
+  }
+}

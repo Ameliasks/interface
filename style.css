@@ -70,6 +70,7 @@ dialog::backdrop {
   -moz-user-select: none;
   -ms-user-select: none;
 }
+/* base */
 .image1 {
   position: relative;
   top: 0;
@@ -93,32 +94,12 @@ dialog::backdrop {
   left: 278px;
   width: 42rem;
   height: auto;
-  background-image: url("img/vinyl1-alt.png");
 }
 
-.image3V1 {
-  position: absolute;
-  top: 38px;
-  left: 278px;
-  width: 42rem;
-  height: auto;
-  background-image: url("img/vinyl2.png");
+#change {
+  /* width: 84rem; */
 }
 
-.image3V2 {
-  position: absolute;
-  top: 38px;
-  left: 278px;
-  width: 42rem;
-  height: auto;
-  background-image: url("img/vinyl3.png");
-}
-
-#vinyl {
-  position: absolute;
-  width: 42rem;
-  height: auto;
-}
 .rotate {
   width: 42rem;
   animation: rotation 4s infinite linear;
