@@ -104,9 +104,29 @@ document.getElementById("dateDisplay").innerHTML = dayName;
 var dateShort = now.toLocaleString("en-US", { timeStyle: "short" });
 document.getElementById("timeDisplay").innerHTML = dateShort;
 
-// use if / else statements (8-16 etc.)
-// ^find img element
-// set src attribute
+// current hour should change
+// 1- image displayed
+// 2- colour of time display
+// 3- song being played
+// 4- ambient sound being played
+
+// 12am-8am
+// 1-vinyl1-alt
+// 2- grey/brown
+// 3- original
+// 4-
+
+// 8am-4pm
+// 1- vinyl2
+// 2- orange
+// 3- remix 1
+// 4-
+
+// 4pm-12am
+// 1- vinyl 3
+// 2- blue
+// 3- remix 2
+// 4- city
 
 const currentHour = now.getHours();
 console.log(currentHour);
