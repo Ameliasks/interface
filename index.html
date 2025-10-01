@@ -58,15 +58,15 @@
           type="range"
           min="0"
           max="100"
-          value="50"
+          value="70"
           class="slider"
           id="volumeSlider"
         />
       </div>
 
       <!-- ambient sound button -->
-      <div class="dial" onclick="toggleOnOff()" transition="0.5s">
-        <button class="knob" onclick=" myFunction()"></button>
+      <div id="myDial" onclick="toggleOnOff()" transition="0.5s" class="dial">
+        <div id="myKnob" class="knob"></div>
       </div>
 
       <!-- use javascript class list method -->
@@ -82,12 +82,12 @@
   <!-- play audio -->
 
   <audio id="main-remix-1" loop>
-    <source src="./audio/TRACK_REMIX_1.wav" type="audio/wav" />
+    <source src="./audio/TRACK_ORIGINAL.wav" type="audio/wav" />
     Your browser does not support the audio element.
   </audio>
 
-  <audio id="ambient-1" loop>
-    <source src="./audio/ambientCity.mp3" type="audio/mp3" />
+  <audio id="ambientSound" loop>
+    <source src="./audio/ambientNature.mp3" type="audio/mp3" />
     Your browser does not support the audio element.
   </audio>
 </html>

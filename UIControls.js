@@ -48,21 +48,24 @@ function togglePlayPause() {
 //button toggles ambient sound on/off
 
 function toggleOnOff() {
-  var ambient = document.getElementById("ambient-1");
+  var ambient = document.getElementById("ambientSound");
   let base = document.getElementById("main-remix-1");
+  let buttonState = document.getElementById("myDial");
+  let knobState = document.getElementById("myKnob");
 
   if (ambient.paused) {
     ambient.play();
-    base.volume = 0.5;
+    base.volume = 0.4;
+    buttonState.classList.add("dialOn");
+    knobState.classList.remove("knob");
+    knobState.classList.toggle("knobOn");
   } else {
     ambient.pause();
     base.volume = 1.0;
+    buttonState.classList.remove("dialOn");
+    knobState.classList.remove("knobOn");
+    knobState.classList.toggle("knob");
   }
-}
-
-function myFunction() {
-  var element = document.getElementById("dial");
-  element.classList.toggle("dial-on");
 }
 
 //START/STOP button plays and pauses rotation
@@ -81,16 +84,7 @@ volumeSlider.addEventListener("input", function () {
   audio.volume = this.value / 100;
 });
 
-// // Check if the current date is the target date
-// if (currentDate.getDate() === targetDate.getDate() &&
-//     currentDate.getMonth() === targetDate.getMonth()) {
-//     myElement.classList.toggle(className, true); // Add the class if it's the target date
-// } else {
-//     myElement.classList.toggle(className, false); // Remove the class if it's not
-// }
-
 // Get current date and time
-
 // set interval
 
 let now = new Date();
@@ -114,7 +108,7 @@ document.getElementById("timeDisplay").innerHTML = dateShort;
 // 1-vinyl1-alt
 // 2- grey/brown
 // 3- original
-// 4-
+// 4- nature
 
 // 8am-4pm
 // 1- vinyl2
@@ -132,15 +126,40 @@ const currentHour = now.getHours();
 console.log(currentHour);
 
 var imgChange = document.getElementById("change");
+var dateColorChange = document.getElementById("dateDisplay");
+var timeColorChange = document.getElementById("timeDisplay");
+var songChange = document.getElementById("main-remix-1");
+var ambientChange = document.getElementById("ambientSound");
 
 if (currentHour < 8) {
-  imgChange.src = "img/vinyl1-alt.png";
+  imgChange.src = "img/vinyl1-alt.png"; // "#927c53"
+  timeColorChange.style.color = "#2a2418";
 } else {
   if (8 <= currentHour < 16) {
-    imgChange.src = "img/vinyl2.png";
+    imgChange.src = "img/vinyl2.png"; // "#facf80"
+
+    timeColorChange.style.color = "#d58056";
+
+    songChange.src = "audio/TRACK_REMIX_1.wav";
+    songChange.play();
+
+    ambientChange.src = "audio/ambientOcean.mp3";
+    ambientChange.play();
   } else {
     if (16 <= currentHour < 24) {
-      imgChange.src = "img/vinyl3.png";
+      imgChange.src = "img/vinyl3.png"; //  "#facf80"
+
+      timeColorChange.style.color = "#6e9aaf";
+
+      songChange.src = "audio/TRACK_REMIX_2.wav";
+      songChange.play();
+
+      ambientChange.src = "audio/ambientCity.mp3";
+      ambientChange.play();
     }
   }
 }
+
+// amelia - find way to plug credits and edit info bar
+// figure out how to justify volume slider
+// homogenise ambient volume

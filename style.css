@@ -263,16 +263,18 @@ dialog::backdrop {
   z-index: 999;
 }
 
-/* ::backdrop {
-  background-image: linear-gradient(
-    45deg,
-    magenta,
-    rebeccapurple,
-    dodgerblue,
-    green
-  );
-  opacity: 0.75;
-} */
+#myDial {
+  position: absolute;
+  top: 76%;
+  left: 320px;
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border: 1px solid #000000;
+}
 
 .dial {
   position: absolute;
@@ -292,7 +294,6 @@ dialog::backdrop {
   position: absolute;
   top: 76%;
   left: 320px;
-  content: "";
   position: absolute;
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -300,29 +301,16 @@ dialog::backdrop {
   height: 3em;
   border-radius: 50%;
   background: #babaae;
-  border: 1px solid #000000;
 }
 
-.dial-on {
-  position: absolute;
-  top: 76%;
-  left: 320px;
-  /* content: ""; */
-  position: absolute;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  width: 3em;
-  height: 3em;
-  border-radius: 50%;
-  background: #051006e1;
-  border: 1px solid #000000;
+.dialOn {
+  background: #babaae;
 }
 
 .knob {
   width: 2.4em;
   height: 2.4em;
   background: rgb(234, 236, 228);
-  content: "";
   position: absolute;
   border-radius: -50%;
   top: 15px;
@@ -334,11 +322,10 @@ dialog::backdrop {
   border: 1px solid #000000;
 }
 
-.knob:active {
+.knobOn {
   width: 2.4em;
   height: 2.4em;
   background: rgb(234, 236, 228);
-  content: "";
   position: absolute;
   border-radius: -50%;
   top: -5px;
