@@ -32,17 +32,17 @@ function playMusic() {
 }
 
 function togglePlayPause() {
+  //START/STOP button plays and pauses rotation
+  let rotationToggle = document.getElementById("change");
+
   var myAudio = document.getElementById("main-remix-1");
   if (myAudio.paused) {
     myAudio.play();
-    //document.getElementById("play").innerHTML="Pause";
+    rotationToggle.classList.add("rotate");
   } else {
     myAudio.pause();
-    //document.getElementById("Pause").innerHTML="Play";
+    rotationToggle.classList.remove("rotate");
   }
-
-  var vinylRotate = document.getElementById("image3");
-  vinylRotate.classList.toggle("rotate");
 }
 
 //button toggles ambient sound on/off
@@ -66,13 +66,6 @@ function toggleOnOff() {
     knobState.classList.remove("knobOn");
     knobState.classList.toggle("knob");
   }
-}
-
-//START/STOP button plays and pauses rotation
-
-function toggleHighlight() {
-  let myBox = document.getElementById("myBox");
-  myBox.classList.toggle("highlight");
 }
 
 /// volume slider
@@ -163,3 +156,11 @@ if (currentHour < 8) {
 // amelia - find way to plug credits and edit info bar
 // figure out how to justify volume slider
 // homogenise ambient volume
+
+// creating interactivity for volume slider
+var sliderColorChange = document.querySelector("slider");
+var iconColorChange = document.querySelector("#musicIcon");
+
+sliderColorChange.addEventListener("oninput", () => {
+  iconColorChange.classList.add("darkMusicIcon");
+});
