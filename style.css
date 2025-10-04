@@ -200,7 +200,7 @@ dialog::backdrop {
 }
 
 .slidecontainer {
-  width: 14%; /* Width of the outside container */
+  width: 13%; /* Width of the outside container */
   height: 5%;
   position: absolute;
   border: 1px solid black;
@@ -351,7 +351,7 @@ dialog::backdrop {
 .datetime {
   position: absolute;
   top: 79.5%;
-  left: 51%;
+  left: 50%;
   width: 30%;
   justify-items: center;
 }
@@ -377,16 +377,16 @@ dialog::backdrop {
   width: 21px;
   height: 21px;
   position: absolute;
-  top: 85%;
-  left: 74.2%;
+  top: 84.5%;
+  left: 73.7%;
   fill: rgba(0, 0, 0, 0.5);
 }
 
-.darkMusicIcon {
+.muteIcon {
   width: 21px;
   height: 21px;
   position: absolute;
-  top: 85%;
-  left: 74.2%;
-  fill: rgb(0, 0, 0);
+  top: 84.5%;
+  left: 73.7%;
+  fill: rgba(0, 0, 0, 0.5);
 }

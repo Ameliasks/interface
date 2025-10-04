@@ -90,6 +90,7 @@ document.getElementById("dateDisplay").innerHTML = dayName;
 // display time
 var dateShort = now.toLocaleString("en-US", { timeStyle: "short" });
 document.getElementById("timeDisplay").innerHTML = dateShort;
+setInterval(dateShort, 200000);
 
 // current hour should change
 // 1- image displayed
@@ -127,30 +128,26 @@ var ambientChange = document.getElementById("ambientSound");
 if (currentHour < 8) {
   imgChange.src = "img/vinyl1-alt.png";
   timeColorChange.style.color = "#2a2418";
-} else {
-  if (8 <= currentHour < 16) {
-    imgChange.src = "img/vinyl2.png";
+} else if (currentHour >= 8 && currentHour < 16) {
+  imgChange.src = "img/vinyl2.png";
 
-    timeColorChange.style.color = "#d58056";
+  timeColorChange.style.color = "#d58056";
 
-    songChange.src = "audio/TRACK_REMIX_1.wav";
-    songChange.play();
+  songChange.src = "audio/TRACK_REMIX_2.wav";
+  songChange.play();
 
-    ambientChange.src = "audio/ambientOcean.mp3";
-    ambientChange.play();
-  } else {
-    if (16 <= currentHour < 24) {
-      imgChange.src = "img/vinyl3.png";
+  ambientChange.src = "audio/ambientOcean.mp3";
+  ambientChange.play();
+} else if (currentHour >= 16) {
+  imgChange.src = "img/vinyl3.png";
 
-      timeColorChange.style.color = "#6e9aaf";
+  timeColorChange.style.color = "#6e9aaf";
 
-      songChange.src = "audio/TRACK_REMIX_2.wav";
-      songChange.play();
+  songChange.src = "audio/TRACK_REMIX_1.wav";
+  songChange.play();
 
-      ambientChange.src = "audio/ambientCity.mp3";
-      ambientChange.play();
-    }
-  }
+  ambientChange.src = "audio/ambientCity.mp3";
+  ambientChange.play();
 }
 
 // amelia - find way to plug credits and edit info bar
@@ -158,5 +155,17 @@ if (currentHour < 8) {
 // homogenise ambient volume
 
 // creating interactivity for volume slider
-var sliderColorChange = document.querySelector("slider");
-var iconColorChange = document.querySelector("#musicIcon");
+var sliderInteract = document.querySelector("slider");
+var iconChange = document.querySelector("#musicIcon");
+
+// music icon changes when there is no volume
+
+function checkForVolume(inputValue) {
+  if (inputValue === 0) {
+    iconChange.src = "img/mute.svg";
+  } else {
+    iconChange.src = "img/on.svg";
+  }
+}
+
+sliderInteract.addEventListener("input", checkForVolume);
