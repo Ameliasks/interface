@@ -115,7 +115,7 @@ document.getElementById("timeDisplay").innerHTML = dateShort;
 // 3- remix 2
 // 4- city
 
-const currentHour = now.getHours();
+var currentHour = now.getHours();
 console.log(currentHour);
 
 var imgChange = document.getElementById("change");
@@ -125,11 +125,11 @@ var songChange = document.getElementById("main-remix-1");
 var ambientChange = document.getElementById("ambientSound");
 
 if (currentHour < 8) {
-  imgChange.src = "img/vinyl1-alt.png"; // "#927c53"
+  imgChange.src = "img/vinyl1-alt.png";
   timeColorChange.style.color = "#2a2418";
 } else {
   if (8 <= currentHour < 16) {
-    imgChange.src = "img/vinyl2.png"; // "#facf80"
+    imgChange.src = "img/vinyl2.png";
 
     timeColorChange.style.color = "#d58056";
 
@@ -140,7 +140,7 @@ if (currentHour < 8) {
     ambientChange.play();
   } else {
     if (16 <= currentHour < 24) {
-      imgChange.src = "img/vinyl3.png"; //  "#facf80"
+      imgChange.src = "img/vinyl3.png";
 
       timeColorChange.style.color = "#6e9aaf";
 
@@ -160,7 +160,3 @@ if (currentHour < 8) {
 // creating interactivity for volume slider
 var sliderColorChange = document.querySelector("slider");
 var iconColorChange = document.querySelector("#musicIcon");
-
-sliderColorChange.addEventListener("oninput", () => {
-  iconColorChange.classList.add("darkMusicIcon");
-});
