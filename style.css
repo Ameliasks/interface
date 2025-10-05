@@ -41,6 +41,27 @@ h2 {
   text-align: left;
 }
 
+.credits {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.credits:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.creditsPrint {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.5);
+}
+
 p {
   font-family: "Instrument Sans", sans-serif;
   font-optical-sizing: auto;
@@ -48,6 +69,10 @@ p {
   font-style: normal;
   font-size: 18px;
   letter-spacing: 0.4px;
+}
+
+a {
+  text-decoration: none;
 }
 
 dialog::backdrop {
@@ -187,7 +212,7 @@ dialog::backdrop {
 
 .close-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .infoButton:hover {
@@ -199,7 +224,7 @@ dialog::backdrop {
 }
 
 .slidecontainer {
-  width: 13%; /* Width of the outside container */
+  width: 13%;
   height: 5%;
   position: absolute;
   border: 1px solid black;

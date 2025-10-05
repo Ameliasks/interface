@@ -128,7 +128,7 @@ var ambientChange = document.getElementById("ambientSound");
 
 if (currentHour < 8) {
   imgChange.src = "img/vinyl1-alt.png";
-  timeColorChange.style.color = "#2a2418";
+  timeColorChange.style.color = "#8a7b4d";
 } else if (currentHour >= 8 && currentHour < 16) {
   imgChange.src = "img/vinyl2.png";
 
@@ -177,3 +177,13 @@ function changeImage() {
 iconButton.addEventListener("click", changeImage);
 
 // sliderInteract.addEventListener("input", checkForVolume);
+
+// credits stored in info dialog
+
+details.addEventListener("toggle", (event) => {
+  if (details.open) {
+    /* the element was toggled open */
+  } else {
+    /* the element was toggled closed */
+  }
+});
