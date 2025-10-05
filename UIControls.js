@@ -32,9 +32,10 @@ function playMusic() {
 }
 
 function togglePlayPause() {
+  //START/STOP button plays and pauses music
   //START/STOP button plays and pauses rotation
-  let rotationToggle = document.getElementById("change");
 
+  let rotationToggle = document.getElementById("change");
   var myAudio = document.getElementById("main-remix-1");
   if (myAudio.paused) {
     myAudio.play();
@@ -156,16 +157,23 @@ if (currentHour < 8) {
 
 // creating interactivity for volume slider
 var sliderInteract = document.querySelector("slider");
-var iconChange = document.querySelector("#musicIcon");
+let iconButton = document.querySelector("musicIconClass");
+var musicIconChange = document.querySelector("#musicIcon");
 
 // music icon changes when there is no volume
 
-function checkForVolume(inputValue) {
-  if (inputValue === 0) {
-    iconChange.src = "img/mute.svg";
-  } else {
-    iconChange.src = "img/on.svg";
-  }
+// function checkForVolume(inputValue) {
+//   if (inputValue === 0) {
+//     iconChange.src = "img/mute.svg";
+//   } else {
+//     iconChange.src = "img/on.svg";
+//   }
+// }
+
+function changeImage() {
+  document.querySelector("#musicIcon").src = "img/mute.svg";
 }
 
-sliderInteract.addEventListener("input", checkForVolume);
+iconButton.addEventListener("click", changeImage);
+
+// sliderInteract.addEventListener("input", checkForVolume);

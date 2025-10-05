@@ -38,7 +38,7 @@ h2 {
   font-family: "Space Mono", monospace;
   font-weight: 400;
   font-size: 14px;
-  text-align: justify;
+  text-align: left;
 }
 
 p {
@@ -105,13 +105,12 @@ dialog::backdrop {
 
 #change {
   width: 42rem;
-  transition: transform 1.5s ease;
 }
 
 .rotate {
   width: 42rem;
   animation: rotation 4s infinite linear;
-  transition: transform 1.5s ease;
+  transition: transform 3s ease-out;
 }
 
 @keyframes rotation {
@@ -213,6 +212,7 @@ dialog::backdrop {
   border-radius: 2px;
   transform: rotate(-90deg);
   padding-right: 0.8rem;
+  z-index: 2;
 }
 
 /* The slider itself */
@@ -224,7 +224,6 @@ dialog::backdrop {
   background: #babaae;
   border: 0.7px solid black;
   outline: none;
-
   -webkit-transition: 0.5s;
   transition: opacity 0.5s;
 }
@@ -232,6 +231,7 @@ dialog::backdrop {
 /* Mouse-over effects */
 .slider:hover {
   opacity: 1; /* Fully shown on mouse-over */
+  background: black;
 }
 
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
@@ -351,8 +351,8 @@ dialog::backdrop {
 .datetime {
   position: absolute;
   top: 79.5%;
-  left: 50%;
-  width: 30%;
+  left: 55%;
+  width: 20%;
   justify-items: center;
 }
 
@@ -380,6 +380,16 @@ dialog::backdrop {
   top: 84.5%;
   left: 73.7%;
   fill: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+#musicIcon:hover {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 84.5%;
+  left: 73.7%;
+  fill: rgb(58, 58, 58);
 }
 
 .muteIcon {
