@@ -60,6 +60,7 @@ h2 {
   font-size: 14px;
   text-align: left;
   color: rgba(0, 0, 0, 0.5);
+  padding-right: 1rem;
 }
 
 p {
@@ -83,6 +84,7 @@ dialog::backdrop {
   color: rgb(234, 236, 228);
   padding: 0.6rem 1.4rem;
   border-radius: 7px;
+  border-width: 1px;
 }
 
 #dialogCloseButton:hover {
@@ -90,6 +92,7 @@ dialog::backdrop {
   color: black;
   padding: 0.6rem 1.4rem;
   border-radius: 7px;
+  border-width: 1px;
 }
 /* .:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:. .:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.  */
 
@@ -192,6 +195,7 @@ dialog::backdrop {
   left: 20%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+  z-index: 3;
 }
 
 .infoButton {
