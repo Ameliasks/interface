@@ -138,45 +138,36 @@ if (currentHour < 8) {
   songChange.play();
 
   ambientChange.src = "audio/ambientOcean.mp3";
-  ambientChange.play();
 } else if (currentHour >= 16) {
   imgChange.src = "img/vinyl3.png";
 
   timeColorChange.style.color = "#6e9aaf";
 
   songChange.src = "audio/TRACK_REMIX_1.wav";
-  songChange.play();
 
   ambientChange.src = "audio/ambientCity.mp3";
-  ambientChange.play();
 }
 
-// amelia - find way to plug credits and edit info bar
-// figure out how to justify volume slider
-// homogenise ambient volume
+// mute button test
 
-// creating interactivity for volume slider
-var sliderInteract = document.querySelector("slider");
-let iconButton = document.querySelector("musicIconClass");
-var musicIconChange = document.querySelector("#musicIcon");
+var muteButton = document.getElementById("musicIcon");
+var muteMusic = document.getElementById("main-remix-1");
+var setRangeZero = document.getElementById("volumeSlider");
 
-// music icon changes when there is no volume
+muteButton.addEventListener("click", () => {
+  muteMusic.muted = !muteMusic.muted;
 
-// function checkForVolume(inputValue) {
-//   if (inputValue === 0) {
-//     iconChange.src = "img/mute.svg";
-//   } else {
-//     iconChange.src = "img/on.svg";
-//   }
-// }
-
-function changeImage() {
-  document.querySelector("#musicIcon").src = "img/mute.svg";
-}
-
-iconButton.addEventListener("click", changeImage);
-
-// sliderInteract.addEventListener("input", checkForVolume);
+  // want to make mute button class
+  if (muteMusic.muted) {
+    muteButton.classList.add = "mute";
+    muteButton.classList.remove = "on";
+    setRangeZero.value = 0;
+  } else {
+    muteButton.classList.remove = "mute";
+    muteButton.classList.add = "on";
+    setRangeZero.value = 70;
+  }
+});
 
 // credits stored in info dialog
 

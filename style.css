@@ -117,7 +117,7 @@ dialog::backdrop {
 .image2 {
   position: absolute;
   top: 0px;
-  left: 15px;
+  left: 16px;
   width: 85rem;
   height: auto;
 }
@@ -421,11 +421,13 @@ dialog::backdrop {
   fill: rgb(58, 58, 58);
 }
 
-.muteIcon {
+.mute {
   width: 21px;
   height: 21px;
   position: absolute;
   top: 84.5%;
   left: 73.7%;
   fill: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  display: none;
 }
