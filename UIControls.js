@@ -56,7 +56,7 @@ function toggleOnOff() {
 
   if (ambient.paused) {
     ambient.play();
-    base.volume = 0.4;
+    base.volume = 0.3;
     buttonState.classList.add("dialOn");
     knobState.classList.remove("knob");
     knobState.classList.toggle("knobOn");
@@ -159,22 +159,18 @@ muteButton.addEventListener("click", () => {
 
   // want to make mute button class
   if (muteMusic.muted) {
-    muteButton.classList.add = "mute";
-    muteButton.classList.remove = "on";
+    // muteButton.classList.add("mute");
+    // muteButton.classList.remove("on");
+
+    muteButton.src = "img/mute.svg";
     setRangeZero.value = 0;
   } else {
-    muteButton.classList.remove = "mute";
-    muteButton.classList.add = "on";
+    // muteButton.classList.remove("mute");
+    // muteButton.classList.add("on");
+
+    muteButton.src = "img/on.svg";
     setRangeZero.value = 70;
   }
 });
 
 // credits stored in info dialog
-
-details.addEventListener("toggle", (event) => {
-  if (details.open) {
-    /* the element was toggled open */
-  } else {
-    /* the element was toggled closed */
-  }
-});
