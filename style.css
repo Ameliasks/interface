@@ -133,11 +133,14 @@ dialog::backdrop {
 
 #change {
   width: 42rem;
+  /* transition: 2s ease; */
+  animation-fill-mode: backwards;
 }
 
 .rotate {
   width: 42rem;
   animation: rotation 4s infinite linear;
+
   transition: transform 3s ease-out;
 }
 
@@ -259,8 +262,21 @@ dialog::backdrop {
 
 /* Mouse-over effects */
 .slider:hover {
-  opacity: 1; /* Fully shown on mouse-over */
+  width: 75%;
+  height: 10px;
   background: black;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 30px;
+  background: url("img/slide.png");
+  background-size: contain;
+  cursor: pointer;
+  transform: rotate(90deg);
+  filter: brightness(90%);
 }
 
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
@@ -410,6 +426,7 @@ dialog::backdrop {
   left: 73.7%;
   fill: rgba(0, 0, 0, 0.5);
   z-index: 2;
+  overflow: visible;
 }
 
 #musicIcon:hover {
@@ -422,12 +439,6 @@ dialog::backdrop {
 }
 
 .mute {
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  top: 84.5%;
-  left: 73.7%;
-  fill: rgba(0, 0, 0, 0.5);
   z-index: 2;
   display: none;
 }

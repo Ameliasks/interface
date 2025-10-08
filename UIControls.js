@@ -153,22 +153,21 @@ if (currentHour < 8) {
 var muteButton = document.getElementById("musicIcon");
 var muteMusic = document.getElementById("main-remix-1");
 var setRangeZero = document.getElementById("volumeSlider");
+var pathChange = document.getElementById("musicOn");
+var pathChanged =
+  "m33.77,2.16l-2.16-2.16-2.49,2.49-20.89,2.84v.05s-.03,0-.03,0v18.03l-.59.59c-.31-.07-.62-.12-.94-.12-2.54,0-4.6,2.06-4.6,4.6,0,.33.04.65.1.96l-2.17,2.17,2.16,2.16,1.68-1.68c.78.61,1.75.99,2.82.99,2.49,0,4.51-1.99,4.58-4.47h.01v-3.94l15.7-15.7v12.64c-.48-.17-.99-.28-1.53-.28-2.54,0-4.6,2.06-4.6,4.6s2.06,4.6,4.6,4.6,4.51-1.99,4.58-4.47h.01V5.91l3.75-3.75Zm-22.51,7.71l12.22-1.74-12.22,12.22v-10.48Z";
+var originalPathData = pathChange.getAttribute("d");
 
 muteButton.addEventListener("click", () => {
   muteMusic.muted = !muteMusic.muted;
 
   // want to make mute button class
   if (muteMusic.muted) {
-    // muteButton.classList.add("mute");
-    // muteButton.classList.remove("on");
+    pathChange.setAttribute("d", pathChanged);
 
-    muteButton.src = "img/mute.svg";
     setRangeZero.value = 0;
   } else {
-    // muteButton.classList.remove("mute");
-    // muteButton.classList.add("on");
-
-    muteButton.src = "img/on.svg";
+    pathChange.setAttribute("d", originalPathData);
     setRangeZero.value = 70;
   }
 });
