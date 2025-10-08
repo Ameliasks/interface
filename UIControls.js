@@ -148,7 +148,9 @@ if (currentHour < 8) {
   ambientChange.src = "audio/ambientCity.mp3";
 }
 
-// mute button test
+// mute button
+// slider should go to 0
+// mute button should change to mute appearance
 
 var muteButton = document.getElementById("musicIcon");
 var muteMusic = document.getElementById("main-remix-1");
@@ -164,7 +166,6 @@ muteButton.addEventListener("click", () => {
   // want to make mute button class
   if (muteMusic.muted) {
     pathChange.setAttribute("d", pathChanged);
-
     setRangeZero.value = 0;
   } else {
     pathChange.setAttribute("d", originalPathData);
@@ -172,4 +173,12 @@ muteButton.addEventListener("click", () => {
   }
 });
 
-// credits stored in info dialog
+function updateRangeAppearance() {
+  if (setRangeZero.value === "0") {
+    pathChange.setAttribute("d", pathChanged);
+  } else {
+    pathChange.setAttribute("d", originalPathData);
+  }
+}
+
+setRangeZero.addEventListener("input", updateRangeAppearance);
