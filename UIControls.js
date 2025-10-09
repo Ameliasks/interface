@@ -43,6 +43,7 @@ function togglePlayPause() {
   } else {
     myAudio.pause();
     rotationToggle.classList.remove("rotate");
+    rotationToggle.classList.add("paused");
   }
 }
 
