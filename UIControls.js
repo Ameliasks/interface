@@ -39,11 +39,13 @@ function togglePlayPause() {
   var myAudio = document.getElementById("main-remix-1");
   if (myAudio.paused) {
     myAudio.play();
-    rotationToggle.classList.add("rotate");
+    // rotationToggle.classList.add("rotate");
+    rotationToggle.style.animationPlayState = "running";
   } else {
     myAudio.pause();
-    rotationToggle.classList.remove("rotate");
-    rotationToggle.classList.add("paused");
+    // rotationToggle.classList.remove("rotate");
+    // rotationToggle.classList.add("paused");
+    rotationToggle.style.animationPlayState = "paused";
   }
 }
 

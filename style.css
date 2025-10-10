@@ -133,18 +133,17 @@ dialog::backdrop {
 
 #change {
   width: 42rem;
-
   animation-play-state: running;
+  transition: 3s all ease;
 }
 .paused {
-  animation-play-state: paused;
-  transition: 2s ease;
+  /* animation-play-state: paused; */
+  transition: 3s all ease;
 }
 
 .rotate {
   width: 42rem;
   animation: rotation 4s infinite linear;
-  transition: transform 3s ease-out;
 }
 
 @keyframes rotation {
