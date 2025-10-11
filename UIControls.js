@@ -9,8 +9,6 @@ document.getElementById("dialogCloseButton").addEventListener("click", () => {
   introModal.close();
 });
 
-// introModal.addEventListener("close", toneInit);
-
 document.getElementById("popupDialog").style.display = "none";
 
 function popupFn() {
@@ -185,3 +183,22 @@ function updateRangeAppearance() {
 }
 
 setRangeZero.addEventListener("input", updateRangeAppearance);
+
+// setting delay for needle to move only on click
+
+var needleAnimate = document.querySelector("#needle");
+var vinylStartAnimate = document.getElementById("change");
+var needleAnimateButton = document.getElementById("dialogCloseButton");
+
+function addMyClass() {
+  vinylStartAnimate.classList.add("rotate");
+}
+
+needleAnimateButton.addEventListener("click", () => {
+  needleAnimate.classList.add("imageToRotate");
+
+  setTimeout(addMyClass, 1500);
+  setTimeout(function () {
+    togglePlayPause();
+  }, 1500);
+});

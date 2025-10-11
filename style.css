@@ -113,13 +113,28 @@ dialog::backdrop {
   width: 85rem;
   height: auto;
 }
+
 /* needle */
-.image2 {
+#needle {
   position: absolute;
   top: 0px;
   left: 16px;
   width: 85rem;
   height: auto;
+  transform-origin: 74% 20%;
+  transform: rotate(-20deg);
+}
+.imageToRotate {
+  animation: customRotate 1.5s ease-out forwards;
+}
+
+@keyframes customRotate {
+  0% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 /* rotate disk */
@@ -401,6 +416,7 @@ dialog::backdrop {
   left: 55%;
   width: 20%;
   justify-items: center;
+  z-index: -1;
 }
 
 #dateDisplay {
